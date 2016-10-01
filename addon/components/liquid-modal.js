@@ -8,9 +8,9 @@ export default Ember.Component.extend({
   classNames: ['liquid-modal'],
   currentContext: Ember.computed('owner.modalContexts.lastObject', function(){
     var context = this.get('owner.modalContexts.lastObject');
-    if (context) {
-      context.view = this.innerView(context);
-    }
+    // if (context) {
+    //   context.view = this.innerView(context);
+    // }
     return context;
   }),
 
