@@ -1,8 +1,7 @@
-// This initializer exists only to make sure that the following
-// imports happen before the app boots.
+import { initialize } from "liquid-fire/ember-internals";
 import "liquid-fire/router-dsl-ext";
-import { registerKeywords } from "liquid-fire/ember-internals";
-registerKeywords();
+
+initialize();
 
 export default {
   name: 'liquid-fire',
