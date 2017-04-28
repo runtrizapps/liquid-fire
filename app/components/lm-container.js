@@ -23,11 +23,11 @@ var lastOpenedModal = null;
 // }
 
 
-function handleTabIntoBrowser() {
-  if (lastOpenedModal) {
-    lastOpenedModal.focus();
-  }
-}
+// function handleTabIntoBrowser() {
+//   if (lastOpenedModal) {
+//     lastOpenedModal.focus();
+//   }
+// }
 
 
 export default Ember.Component.extend({
@@ -50,7 +50,7 @@ export default Ember.Component.extend({
   },
 
   didInsertElement: function() {
-    this.focus();
+    // this.focus();
     lastOpenedModal = this;
   },
 
