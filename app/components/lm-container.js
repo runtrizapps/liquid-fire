@@ -18,9 +18,9 @@ import isBrowser from "liquid-fire/is-browser";
  */
 var lastOpenedModal = null;
 
-if (isBrowser()) {
-  Ember.$(document).on('focusin', handleTabIntoBrowser);
-}
+// if (isBrowser()) {
+//   Ember.$(document).on('focusin', handleTabIntoBrowser);
+// }
 
 
 function handleTabIntoBrowser() {
@@ -58,22 +58,22 @@ export default Ember.Component.extend({
     lastOpenedModal = null;
   },
 
-  focus: function() {
-    if (this.get('element').contains(document.activeElement)) {
-      // just let it be if we already contain the activeElement
-      return;
-    }
-    var target = this.$('[autofocus]');
-    if (!target.length) {
-      target = this.$(':tabbable');
-    }
-
-    if (!target.length) {
-      target = this.$();
-    }
-
-    target[0].focus();
-  },
+  // focus: function() {
+  //   if (this.get('element').contains(document.activeElement)) {
+  //     // just let it be if we already contain the activeElement
+  //     return;
+  //   }
+  //   var target = this.$('[autofocus]');
+  //   if (!target.length) {
+  //     target = this.$(':tabbable');
+  //   }
+  //
+  //   if (!target.length) {
+  //     target = this.$();
+  //   }
+  //
+  //   target[0].focus();
+  // },
 
   constrainTabNavigation: function(event) {
     var tabbable = this.$(':tabbable');
